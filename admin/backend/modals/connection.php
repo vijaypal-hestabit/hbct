@@ -26,8 +26,8 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
     {
         private $host = 'http://tse.hestalabs.com/tsedb.php';
         private $user = 'tse';
-        private $pass = 'bPmtHasjyTJ2SgZJ';
-        private $dbname = 'vijay_pal';
+        private $pass = '0wi&lbRuPuv';
+        private $dbname = 'Vijay';
         public $conn;
         
         public function __construct()
