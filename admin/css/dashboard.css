@@ -1,0 +1,15 @@
+#logout {
+    width: 50px;
+    height: auto;
+    text-align: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header {
+    background-color: #dfebf6 !important;
+}
+
+.cke_contents {
+    min-height: 500px;
+}

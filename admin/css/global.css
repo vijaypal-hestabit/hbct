@@ -1,0 +1,21 @@
+body{
+    background-color: #e4ecf08c !important;
+}
+.text-right {
+    text-align: right;
+}
+/* Full-width input fields */
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=select],
+input[type=date] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0px;
+    display: inline-block;
+    border: 2px solid #aaa0a0;;
+    box-sizing: border-box;
+    border-radius: 5px;
+}

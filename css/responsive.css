@@ -1,0 +1,26 @@
+@media screen and (max-width: 992px) {
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
+  .right_sidebar {
+    display: inherit !important;
+    align-items: center !important;
+  }
+
+  .right_sidebar figure {
+    padding: 0 2px !important;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */
