@@ -1,5 +1,7 @@
 <?php
 
+include '../../backend/modals/connection.php';
+
 /*
  * CKFinder Configuration File
  *
@@ -66,7 +68,7 @@ $config['images'] = array(
 $config['backends'][] = array(
     'name'         => 'default',
     'adapter'      => 'local',
-    'baseUrl'      => 'http://127.0.0.1/hbct/admin/ckeditor/userfiles/',
+    'baseUrl'      => $base_url.'/admin/ckeditor/userfiles/',
 //  'root'         => '', // Can be used to explicitly set the CKFinder user files directory.
     'chmodFiles'   => 0777,
     'chmodFolders' => 0755,

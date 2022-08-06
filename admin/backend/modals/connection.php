@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
-    $base_url = 'http://'.$_SERVER['HTTP_ORIGIN'].'/hbct/';
+    $base_url = 'http://'.$_SERVER['HTTP_HOST'].'/hbct/';
     class dbConnection
     {
         private $host = 'localhost';
