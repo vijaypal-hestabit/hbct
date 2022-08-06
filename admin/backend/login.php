@@ -5,8 +5,8 @@ error_reporting(E_ALL);
 
 use validator\validator;
 
-include "validator.php";
-include "modals/login.php";
+require "validator.php";
+require "modals/login.php";
 class login
 {
     function __construct()

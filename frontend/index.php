@@ -11,9 +11,9 @@
     <link href="../css/responsive.css" rel="stylesheet">
 </head>
 
-<?php include '../frontend/header.php'?>
-<?php include '../frontend/left_sidebar.php'?>
-<?php include '../frontend/content.php'?>
-<?php include '../frontend/right_sidebar.php'?>
-<?php include '../frontend/footer.php'?>
+<?php require '../frontend/header.php'?>
+<?php require '../frontend/left_sidebar.php'?>
+<?php require '../frontend/content.php'?>
+<?php require '../frontend/right_sidebar.php'?>
+<?php require '../frontend/footer.php'?>
 

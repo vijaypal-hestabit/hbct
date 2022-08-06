@@ -24,7 +24,7 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
     $base_url = 'http://'.$_SERVER['HTTP_HOST'].'/tse/hbct/';
     class dbConnection
     {
-        private $host = 'localhost';
+        private $host = 'http://tse.hestalabs.com/tsedb.php';
         private $user = 'tse';
         private $pass = 'bPmtHasjyTJ2SgZJ';
         private $dbname = 'vijay_pal';
