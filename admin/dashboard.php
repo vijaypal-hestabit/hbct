@@ -31,6 +31,14 @@ if (isset($_SESSION['email'])) {
             </div>
         </div>
         <div class="dashboard_wrapper mt-4">
+            <div id="status_toast" class="toast align-items-center text-white bg-success border-0 position-absolute" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Data insert successfully
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
             <div class="container">
                 <form method="post">
                     <textarea class="form-control" name="ckeditor" id="ckeditor" cols="100" rows="30"></textarea>
@@ -43,11 +51,19 @@ if (isset($_SESSION['email'])) {
         </div>
     </body>
     <!-- bootstrap 5 js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="ckeditor/ckeditor/ckeditor.js"></script>
     <script src="ckeditor/ckfinder/ckfinder.js"></script>
     <script src="js/dashboard.js"></script>
+
+    <!-- <script>
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function(toastEl) {
+            return new bootstrap.Toast(toastEl, option)
+        })
+    </script> -->
 
     </html>
 <?php

@@ -17,19 +17,25 @@ class DashboardModal
         $editor_data = addslashes($editor_data);
         $result = mysqli_num_rows($query);
         if ($result > 0) {
-            $datetime = date('Y-m-d h:i:s');
-            $login_query = "UPDATE `articles` SET `article`='$editor_data',`edited_on`='$datetime '";
-            $query = $this->db->conn->query($login_query);
-            if ($query) {
-                $response = 'Update successfully';
+            $data = $query->fetch_assoc();
+            $dbdata = $data['article'];
+            if ($dbdata == $editor_data) {
+                $response = 'Data already udpdated.';
             } else {
-                $response = false;
+                $datetime = date('Y-m-d h:i:s');
+                $login_query = "UPDATE `articles` SET `article`='$editor_data',`edited_on`='$datetime '";
+                $query = $this->db->conn->query($login_query);
+                if ($query) {
+                    $response = 'Update successfully.';
+                } else {
+                    $response = false;
+                }
             }
-        }else{
+        } else {
             $login_query = "INSERT INTO `articles` (`article`) VALUES ('{$editor_data}')";
             $query = $this->db->conn->query($login_query);
             if ($query) {
-                $response = 'Insert successfully';
+                $response = 'Insert successfully.';
             } else {
                 $response = false;
             }

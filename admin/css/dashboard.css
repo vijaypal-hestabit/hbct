@@ -13,3 +13,8 @@
 .cke_contents {
     min-height: 500px;
 }
+#status_toast{
+    position: absolute;
+    z-index: 1;
+    right: 20px;
+}

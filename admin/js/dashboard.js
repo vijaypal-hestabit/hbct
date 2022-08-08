@@ -7,7 +7,9 @@ $(document).ready(function () {
         url: "../backend/modals/get_content.php",
         dataType: "json",
         success: function (response) {
-            CKEDITOR.instances['ckeditor'].setData(response[0].article)
+            if (response) {
+                CKEDITOR.instances['ckeditor'].setData(response[0].article)
+            }
         }
     });
 
@@ -18,7 +20,7 @@ $("#submit").click(function (e) {
     if (editor_data == '' && jQuery.trim(editor_data).length == 0) {
         $('#ckeditor_err').html('Please Enter something')
         $('#ckeditor_err').removeClass('text-success');
-        $('#ckeditor_err').addClass('error')
+        $('#ckeditor_err').addClass('text-danger')
         setTimeout(() => {
             $('#ckeditor_err').html('')
         }, 2000);
@@ -26,29 +28,23 @@ $("#submit").click(function (e) {
         $.ajax({
             type: "post",
             url: "backend/dashboard.php",
-            // beforeSend: function () {
-            //     var html = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Please Wait...';
-            //     $('#ckeditor_err').html(html);
-            //     $('#ckeditor_err').css({color:'yellow'});
-            // },
             data: {
                 'editor_data': editor_data
             },
             dataType: "json",
             success: function (response) {
                 if (response.data_insert) {
-                    $('#ckeditor_err').removeClass('error');
-                    $('#ckeditor_err').addClass('text-success');
-                    $('#ckeditor_err').html(response.data_insert);
+                    $('.toast-body').html(response.data_insert);
+                    $('#status_toast').addClass('show')
                     setTimeout(() => {
-                        $('#ckeditor_err').html('');
-                    }, 2000);
+                        $('#status_toast').removeClass('show')
+                    }, 3000);
                 } else {
                     $('#ckeditor_err').html('Data not inserted')
                     $('#ckeditor_err').removeClass('text-success');
                     $('#ckeditor_err').addClass('error')
                     setTimeout(() => {
-                        $('#ckeditor_err').html('Insert successfully');
+                        $('#ckeditor_err').html('');
                     }, 3000);
                 }
             }
