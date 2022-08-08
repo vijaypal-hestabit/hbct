@@ -9,6 +9,5 @@ $.ajax({
     },
     success: function (response) {
         $('#setContent').html(response[0].article)
-        console.log(response)
     }
 });

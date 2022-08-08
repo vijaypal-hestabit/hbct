@@ -32,7 +32,6 @@ $('#log_in').click(function() {
             data: formData,
             dataType: "json",
             success: function(response) {
-                console.log(response)
                 if (response.login == true) {
                     $("#login_status").html('Login successfully')
                     $("#login_status").css({
