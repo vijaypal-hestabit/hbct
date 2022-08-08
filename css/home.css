@@ -38,3 +38,11 @@ img {
     height: auto !important;
     width: auto !important;
 }
+
+.mobile_none {
+    display: block !important;
+}
+
+.mobile_block {
+    display: inline;
+}

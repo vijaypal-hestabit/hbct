@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['HTTP_HOST'] == 'localhost') {
+if ($_SERVER['HTTP_HOST'] == 'hbsports.com') {
     $base_url = 'http://'.$_SERVER['HTTP_HOST'].'/hbct/';
     class dbConnection
     {

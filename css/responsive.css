@@ -21,6 +21,12 @@
   .right_sidebar figure {
     padding: 0 2px !important;
   }
+  .mobile_none{
+    display: none !important;
+  }
+  .mobile_block{
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=responsive.css.map */
