@@ -12,9 +12,9 @@
     <link href="../css/responsive.css" rel="stylesheet">
 </head>
 
-<?php require '../frontend/header.php'?>
-<?php require '../frontend/left_sidebar.php'?>
-<?php require '../frontend/content.php'?>
-<?php require '../frontend/right_sidebar.php'?>
-<?php require '../frontend/footer.php'?>
+<?php require 'attached_file/header.php'?>
+<?php require 'attached_file/left_sidebar.php'?>
+<?php require 'attached_file/content.php'?>
+<?php require 'attached_file/right_sidebar.php'?>
+<?php require 'attached_file/footer.php'?>
 
