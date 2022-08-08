@@ -40,7 +40,7 @@ img {
 }
 
 .mobile_none {
-    display: block !important;
+    display: inline !important;
 }
 
 .mobile_block {

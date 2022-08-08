@@ -4,3 +4,8 @@
     cursor: pointer;
     margin-top: 27px;
 }
+.login_section{
+    border: 2px solid #a7abad;
+    padding: 20px;
+    border-radius: 5px;
+}
