@@ -29,7 +29,7 @@
     },
     "config": {
         "preferred-install": "dist",
-        "platform-check": false
+        "platform-check": true
     },
     "extra": {
         "branch-alias": {
