@@ -45,7 +45,7 @@ if (isset($_SESSION['email'])) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 text-center">
+                    <div class="col-sm-6 text-center mt-4 mt-md-0">
                         <figure>
                             <img src="../assets/lock.png" id="lock_img" class="img-fluid" alt="poster">
                         </figure>
