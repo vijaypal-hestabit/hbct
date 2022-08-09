@@ -27,7 +27,7 @@ if (isset($_SESSION['email'])) {
         <div class="admin_login">
             <div class="container">
                 <div class="row content_center">
-                    <div class="col-sm-6 d-grid align-items-center">
+                    <div class="col-sm-6 d-grid align-items-center mt-4 mt-md-0">
                         <div class="login_section">
                             <h2 class="text-info">Login to your account.</h2>
                             <h4 id="login_status"></h4>
