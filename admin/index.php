@@ -32,10 +32,10 @@ if (isset($_SESSION['email'])) {
                             <h2 class="text-info">Login to your account.</h2>
                             <h4 id="login_status"></h4>
                             <div class="login_content mt-2">
-                                <input type="text" name="email" id="email_id" placeholder="Enter Email">
+                                <input type="text" name="email" id="email_id" onkeyup="return emailValidator()" placeholder="Enter Email">
                                 <div class="error" id="emial_err"></div>
                                 <div>
-                                    <input type="password" name="password" class="password" id="password" placeholder="Enter Password">
+                                    <input type="password" name="password" onkeyup="return passwordValidator()" class="password" id="password" placeholder="Enter Password">
                                     <i class="far fa-eye" id="togglePassword"></i>
                                 </div>
                                 <div class="error" id="password_err"></div>
