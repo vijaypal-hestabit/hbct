@@ -17,7 +17,10 @@ $(document).ready(function () {
 $("#submit").click(function (e) {
     e.preventDefault();
     let editor_data = CKEDITOR.instances.ckeditor.getData();
-    if (editor_data == '' && jQuery.trim(editor_data).length == 0) {
+
+    var text = $(editor_data).text().trim();
+
+    if (text.length == 0) {
         $('#ckeditor_err').html('Please Enter something')
         $('#ckeditor_err').removeClass('text-success');
         $('#ckeditor_err').addClass('text-danger')

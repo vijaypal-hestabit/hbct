@@ -16,7 +16,7 @@ $('#log_in').click(function() {
         }, 50);
         $('#password_err').html('Please enter password');
     } else {
-        password_status = true
+        var password_status = true
         $('#password_err').html('');
     }
 
