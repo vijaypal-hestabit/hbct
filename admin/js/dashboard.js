@@ -35,8 +35,8 @@ $("#submit").click(function (e) {
                 'editor_data': editor_data
             },
             beforeSend: function () {
-                $('#submit').prop('disabled')
-                $('#submit').append('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+                $('#submit').prop( "disabled", false );
+                $('#submit').append('<span class="ml-2 spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
             },
             dataType: "json",
             success: function (response) {
