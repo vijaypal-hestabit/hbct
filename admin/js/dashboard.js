@@ -35,8 +35,8 @@ $("#submit").click(function (e) {
                 'editor_data': editor_data
             },
             beforeSend: function () {
-                $('#submit').prop( "disabled", false );
-                $('#submit').append('<span class="ml-2 spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+                $('#submit').prop( "disabled", true );
+                $('#submit span').removeClass('d-none')
             },
             dataType: "json",
             success: function (response) {
@@ -56,7 +56,8 @@ $("#submit").click(function (e) {
                 }
             },
             complete: function() {
-                $('.spinner-border').css({display:'none'})
+                $('#submit').prop( "disabled", false );
+                $('#submit span').addClass('d-none')
             }
         });
     }
