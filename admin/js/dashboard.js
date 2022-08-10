@@ -34,6 +34,10 @@ $("#submit").click(function (e) {
             data: {
                 'editor_data': editor_data
             },
+            beforeSend: function () {
+                $('#submit').prop('disabled')
+                $('#submit').append('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>');
+            },
             dataType: "json",
             success: function (response) {
                 if (response.data_insert) {
@@ -50,6 +54,9 @@ $("#submit").click(function (e) {
                         $('#ckeditor_err').html('');
                     }, 3000);
                 }
+            },
+            complete: function() {
+                $('.spinner-border').css({display:'none'})
             }
         });
     }

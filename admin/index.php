@@ -36,7 +36,7 @@ if (isset($_SESSION['email'])) {
                                 <div class="error" id="emial_err"></div>
                                 <div>
                                     <input type="password" name="password" onkeyup="return passwordValidator()" class="password" id="password" placeholder="Enter Password">
-                                    <i class="far fa-eye" id="togglePassword"></i>
+                                    <i class="far fa-eye-slash" id="togglePassword"></i>
                                 </div>
                                 <div class="error" id="password_err"></div>
                                 <div class="mt-2 text-right">
@@ -67,7 +67,7 @@ if (isset($_SESSION['email'])) {
         togglePassword.addEventListener('click', function(e) {
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
             password.setAttribute('type', type);
-            this.classList.toggle('fa-eye-slash');
+            this.classList.toggle('fa-eye');
         });
     </script>
 

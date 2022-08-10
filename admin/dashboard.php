@@ -43,7 +43,7 @@ if (isset($_SESSION['email'])) {
                 <form method="post">
                     <textarea class="form-control" name="ckeditor" id="ckeditor" cols="100" rows="30"></textarea>
                     <div class="error" id="ckeditor_err"></div>
-                    <div class="mt-4 text-right">
+                    <div class="mt-4 text-right updating_btn">
                         <button class="btn btn-info" id="submit">Submit</button>
                     </div>
                 </form>

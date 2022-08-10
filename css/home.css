@@ -46,3 +46,7 @@ img {
 .mobile_block {
     display: inline;
 }
+
+.fa-eye:before {
+    content: "\f06e" !important;
+}
